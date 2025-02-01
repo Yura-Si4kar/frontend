@@ -1,0 +1,146 @@
+.case-shoping {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    margin: 90px auto 0; 
+    border: 1px solid var(--yellow-green);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    display: none;
+
+    &_btn {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        font-size: 14px;
+        padding: 5px 8px;
+        background-color: var(--dirty-sea-wave);
+        color: var(--white);
+        text-align: center;
+        border-radius: 8px;
+        border: none;
+        cursor: pointer;
+    }
+}
+
+.shoping-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.shoping-title {
+    color: var(--yellow);
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+.shoping-list {
+    height: 250px;
+    padding: 10px 20px;
+    text-align: left;
+    overflow: auto;
+}
+
+.list-item {
+    display: flex;
+    align-items: center;
+    color: var(--yellow);
+    font-size: 20px;
+
+    & span {
+        margin-left: 5px;
+    }
+}
+
+.done {
+    text-decoration: line-through;
+    text-decoration-color: var(--black);    
+}
+
+.form-title {
+    color: var(--dirty-yellow);
+    font-size: 14px;
+}
+
+.shopping-form {
+    display: flex;
+    justify-content: space-between;
+}
+
+.shopping-input {
+    color: #fff;
+    background-color: transparent;
+    width: 100%;
+    // box-sizing: border-box;
+    // padding-inline: 0.5em;
+    // padding-block: 0.7em;
+    border: none;
+    border-bottom: var(--border-height) solid var(--border-before-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    &::placeholder {
+        color: var(--white);
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &:focus + .input-border {
+       width: 100%;
+    }
+}
+
+.input-border {
+  position: absolute;
+  background: var(--border-after-color);
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+.form-control {
+  position: relative;
+}
+
+.input-alt {
+  font-size: .9rem;
+  padding-inline: 1em;
+  padding-block: 0.4em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.input-border-alt {
+  height: 3px;
+  background: linear-gradient(90deg, #FF6464 0%, #FFBF59 50%, #47C9FF 100%);
+  transition: width 0.4s cubic-bezier(0.42, 0, 0.58, 1.00);
+}
+
+.input-alt:focus + .input-border-alt {
+  width: 100%;
+}
+
+
+.add-item {
+    font-size: 14px;
+    padding: 2px 5px;
+    border: none;
+    background-color: var(--secondary-green);
+    border-radius: 8px;
+    color: var(--secondary-yellow);
+}
+
+@media (min-width: 992px) {
+  .case-shoping {
+    display: block;
+    position: relative;
+    grid-area: shopping;
+    margin-top: 0;
+  }
+}

@@ -1,0 +1,138 @@
+.footer {
+    background-color: var(--header-bg);
+    padding-top: 50px; /* Зменшив відступ зверху для зручності */
+
+    &__section {
+        display: flex;
+        flex-wrap: wrap;
+
+        @media (min-width: 768px) {
+            justify-content: space-between;
+        }
+    }
+
+    &__about,
+    &__contact {
+        width: calc(100% - 30px);
+        margin-bottom: 40px; /* Додав відступ між секціями */
+
+        @media (min-width: 768px) {
+            width: calc(50% - 30px);
+        }
+    }
+
+    &__title {
+        color: var(--main);
+        font-size: 12px;
+        line-height: 10.8px;
+        letter-spacing: 4.8px;
+        text-transform: uppercase;
+        padding-bottom: 20px; /* Зменшив відступ знизу для зручності */
+        text-align: center;
+
+        @media (min-width: 768px) {
+            text-align: left;
+        }
+    }
+
+    &__text {
+        font-size: 16px;
+        line-height: 30px;
+        color: var(--white);
+        margin-bottom: 20px; /* Зменшив відступ знизу для зручності */
+    }
+
+    &__links {
+        display: flex;
+    }
+
+    &__link {
+        width: 20px;
+        height: 20px;
+        margin-right: 16px;
+
+        &_facebook:hover {
+            filter: drop-shadow(0 0 2px #0000ff);
+            & path {
+                fill: #0000ff;
+            }
+        }
+
+        &_viber:hover {
+            filter: drop-shadow(-1px -1px 2px #7360f2);
+            & path {
+                fill: #7360f2;
+            }
+        }
+
+        &_tiktok:hover {
+            filter: drop-shadow(-1px -1px 2px #69C9D0);
+            & path {
+                fill: #010101;
+            }
+        }
+    }
+
+    &__post {
+        padding: 12px 0;
+        border-bottom: 1px solid var(--soft-grey);
+    }
+
+    &__post-text {
+        padding-left: 24px;
+        width: 80%;
+        color: var(--white);
+        font-size: 15px;
+        line-height: 30px;
+        background-image: url(../img/svg/arrow.svg);
+        background-repeat: no-repeat;
+        background-position: left top;
+    }
+
+    &__contact-list {
+        color: var(--white);
+        font-size: 16px;
+        line-height: 30px;
+    }
+
+    &__contact-item {
+        padding-bottom: 10px;
+    }
+
+    &__contact-label {
+        background-repeat: no-repeat;
+        background-position: left top;
+        padding-left: 25px;
+
+        &_location {
+            background-image: url(../img/svg/location.svg);
+        }
+        
+        &_phone {
+            background-image: url(../img/svg/phone.svg);
+        }
+        
+        &_email {
+            background-image: url(../img/svg/mail.svg);
+        }
+    }
+
+    &__contact-link {
+        padding-left: 25px;
+
+        &:hover {
+            color: var(--main);
+        }
+    }
+
+    &__rule {
+        padding: 17px 0 23px 0;
+        color: var(--white);
+        text-align: center;
+        font-size: 12px;
+        line-height: 12px;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        background-color: var(--grey);
+    }
+}

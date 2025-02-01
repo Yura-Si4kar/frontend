@@ -1,0 +1,50 @@
+<header class="header container" id="start">
+    <h2 class="visually-hidden">Шапка сайту</h2>
+    <div class="header__main">
+        <a href="#" class="header__logo">
+            <picture>
+                <source media="(min-width: 768px)" srcset="./img/logo.svg" width="129" height="32">
+                <img src="./img/logo.svg" alt="logo">
+            </picture>
+        </a>
+        <div class="header__wrapper">
+            <nav class="header__menu">
+                <ul class="header__menu-list">
+                    <li class="header__menu-item">
+                        <a href="#about_us" class="header__menu-link language" data-translate="aboutUs">&nbsp;</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="#howDoesItWork" class="header__menu-link language"
+                            data-translate="howDoesItWork">&nbsp;</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="#map" class="header__menu-link language" data-translate="whereDoWeWork">&nbsp;</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="#faq" class="header__menu-link language" data-translate="faq">&nbsp;</a>
+                    </li>
+                </ul>
+                <ul class="header__language-list">
+                    <li class="header__language-item">
+                        <p class="header__language-title">Выберите язык</p>
+                    </li>
+                    <li class="header__language-item">
+                        <button class="header__language-link header__language-link_ru" value="ru">Русский</button>
+                    </li>
+                    <li class="header__language-item">
+                        <button class="header__language-link header__language-link_ua" value="uk">Українська</button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="header__actions">
+        <select name="language" class="header__actions-language" aria-label="Choose Language">
+            <option value="ru">Русский</option>
+            <option value="uk">Українська</option>
+        </select>
+        <button class="header__actions-burger" aria-label="Toggle Navigation">
+            <span></span>
+        </button>
+    </div>
+</header>

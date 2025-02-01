@@ -1,0 +1,108 @@
+.duties {
+    background-color: #233142;
+    padding: 145px 20px;
+    width: 100%;
+
+    @media (min-width: 576px) {
+        padding: 145px 40px;
+    }
+
+    @media (min-width: 768px) {
+        padding: 145px 60px;
+    }
+
+    @media (min-width: 992px) {
+        padding: 145px 80px;
+    }
+
+    @media (min-width: 1200px) {
+        padding: 145px 145px;
+    }
+
+    &__block {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        &-item {
+            width: calc(100% - 20px);
+            margin-bottom: 20px;
+            background-repeat: no-repeat;
+            background-position: top left;
+            padding-left: 60px;
+
+            @media (min-width: 576px) {
+                width: calc(48% - 20px);
+                // padding-left: 10px;
+            }
+
+            @media (min-width: 768px) {
+                width: calc(32% - 20px);
+            }
+
+            @media (min-width: 992px) {
+                width: calc(32% - 20px);
+            }
+
+            @media (min-width: 1200px) {
+                width: calc(33.333% - 20px);
+                // padding-left: 60px;
+            }
+
+            &_01 {
+                background-image: url(../img/svg/duties1.svg);
+            }
+            
+            &_02 {
+                background-image: url(../img/svg/duties2.svg);
+            }
+
+            &_03 {
+                background-image: url(../img/svg/duties3.svg);                
+            }
+
+            &_04 {
+                background-image: url(../img/svg/duties4.svg);
+            }
+
+            &_05 {
+                background-image: url(../img/svg/duties5.svg);
+            }
+
+            &_06 {
+                background-image: url(../img/svg/duties6.svg);                
+            }
+        }
+    
+        &-title {
+            color: var(--white);
+            font-size: 20px;
+            line-height: 23px;
+            text-transform: capitalize;
+            padding-bottom: 18px;
+            overflow-wrap: break-word;
+        }
+    
+        &-text {
+            color: #FFF;
+            font-family: Poppins;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+            width: 80%;
+            
+            @media (min-width: 576px) {
+                width: 70%;
+            }
+
+            @media (min-width: 992px) {
+                width: 60%;
+            }
+
+            @media (min-width: 1200px) {
+                width: 80%;
+            }
+        }
+    }
+}
