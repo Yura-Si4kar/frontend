@@ -1,0 +1,84 @@
+.faq {
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    &-title {
+        font-size: 24px;
+        line-height: 32px;
+        color: #000000;
+        padding-bottom: 16px;
+    }
+
+    &-text {
+        font-size: 14px;
+        line-height: 20px;      
+        color: #6F767E;
+        padding-bottom: 24px;
+    }
+    
+    &__acordion-btn {
+      background-color: white;
+      color: #444;
+      cursor: pointer;
+      padding: 8px 16px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      text-align: left;
+      justify-content: space-between;
+      border: 1px solid #BEBFBE;
+      border-left: none;
+      border-right: none;
+      transition: 0.4s;
+    }
+
+    &__acordion-btn::after {
+      content: '\002B'; /* Символ юникода для "плюса" знак (+) */
+      font-size: 30px;
+      color: #888887;
+      float: right;
+      margin-left: 5px;
+    }
+    
+    &__acordion-panel {
+      padding: 0 16px;
+      background-color: white;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+    }
+    
+    &__acordion-text {
+        padding: 16px 0;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        color: #6F767E;
+    }
+}
+
+.active:after {
+  content: "\2212"; /* Символ юникода для "минуса" знак (-) */
+  display: block;
+}
+
+.active, .faq__acordion-btn:hover {
+  background-color: white;
+  border-bottom: none;
+}
+
+@media (min-width: 992px) {
+  .faq {
+    display: flex;
+    padding-top: 120px;
+    padding-bottom: 120px;
+
+    &-intro {
+      width: 33.333%;
+    }
+
+    &-questions {
+      width: 66.666%;
+    }
+  }
+}

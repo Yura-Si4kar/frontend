@@ -1,0 +1,291 @@
+.countries {
+    padding-top: 32px;
+    padding-bottom: 37px;
+    border-bottom: 1px solid #D9D9D9;
+
+    &-title {
+        font-size: 24px;
+        line-height: 32px;
+        color: #000000;
+        padding-bottom: 24px;
+    }
+
+    &__actions {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 16px;
+        position: relative;
+
+        &-app {
+            background: #3E8BF3;
+            border-radius: 8px;
+            padding: 12px 24px;
+            font-size: 16px;
+            line-height: 24px;
+            color: #FFFFFF;
+            margin-bottom: 16px;
+        }
+        
+        &-connect {
+            background: #F5F9FE;
+            border-radius: 8px;
+            padding: 12px 24px;
+            font-size: 16px;
+            line-height: 24px;
+            color: #6F767E;
+        }
+    }
+    
+
+    &-map {
+        padding: 32px 0;
+        width: 100%;
+
+        & path:hover {
+            stroke-width: 0,5;
+            stroke:#3E8BF3;
+            fill: #6F767E;
+            cursor: pointer;
+        }
+    }
+
+    &__list {
+        display: flex;
+        padding: 8px 0;
+        background-color: #F5F9FE;
+        border-radius: 16px;
+        height: auto;
+        overflow-y: auto;
+        
+        @media (min-width: 1250px) {
+            height: 216px;
+            overflow: hidden;
+            overflow-Y: auto;
+        }
+        
+        &-item {
+            margin-right: 8.5px;
+        }
+        
+        &-link {
+            font-size: 14px;
+            line-height: 20px;
+            color: #6F767E;
+            padding: 8px 16px;
+            background-repeat: no-repeat;
+            background-position: left;
+            background-size: 20px 20px;
+            padding-left: 28px;
+            white-space: nowrap;
+            
+            @media (min-width: 1250px) {
+                white-space: normal;
+            }
+
+            &.select {
+                color: #000000;
+                background-color: #FFFFFF;
+                border-radius: 8px;
+            }
+
+            &:hover {
+                color: #3E8BF3;
+                background-color: rgb(217, 217, 217);
+            }
+        }
+    }
+
+    &-wrapper {
+        position: fixed;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        transition: 0.2s;
+        overflow: auto;
+        transition: all 0.4s ease 0s;
+        backdrop-filter: blur(10px);
+        z-index: 8;
+        display: none;
+
+        &.show {
+            display: block;
+        }
+    }
+
+    &-form {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 320px;
+        padding: 20px;
+        backdrop-filter: blur(10px);
+        border-radius: 23px;
+        background: linear-gradient(145deg, #D9FFFFFF, #f6f6f6);
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        &-title {
+            font-size: 20px;
+            line-height: 22px;
+            color: #000000;
+        }
+
+        &-close {
+            font-size: 20px;
+            cursor: pointer;
+        }
+    }
+
+    &-input {
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #fff;
+        color: #333;
+    }
+    
+    &-select {
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #fff;
+        color: #333;
+        cursor: pointer;
+
+        &:hover {
+            border-color: #666; 
+        }
+
+        &:focus {
+            outline: none;
+            border-color: #007bff;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+
+        & option {
+            background-color: #fff;
+            color: #333;
+        }
+
+        & option:checked {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        & option:hover {
+            background-color: #f0f0f0;
+            color: #333;
+        }
+    }
+
+    &__btns {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &-response {
+            font-size: 14px;
+            line-height: 16px;
+            color: #000000;
+            padding: 9px 10px;
+            background-color: green;
+            border-radius: 8px;
+        }
+    
+        &-reject {
+            font-size: 14px;
+            line-height: 16px;
+            color: #000000;
+            padding: 9px 10px;
+            background-color: red;
+            border-radius: 8px;
+        }
+    }
+
+}
+
+@media (min-width: 768px) {
+    .countries {
+        padding-top: 80px;
+        padding-bottom: 80px;
+
+        &-title {
+            font-size: 48px;
+            line-height: 56px;
+            color: #000000;
+            padding-bottom: 32px;
+        }
+
+        &__actions {
+            flex-direction: row;
+
+            &-app {
+                margin-bottom: 0;
+                margin-right: 16px;
+            }
+        }
+        
+        &-map {
+            padding: 64px 0 24px; 
+        }
+
+        &__list {
+            padding: 8px;
+            justify-content: space-between;
+
+            &-link {
+                font-size: 16px;
+                line-height: 24px;
+            }
+        }
+    }
+}
+
+@media (min-width: 1250px) {
+    .countries {
+        display: flex;
+        position: relative;
+        
+        &__list {
+            align-self: start;
+            justify-self: start;
+            flex-direction: column;
+            margin-right: 59px;
+
+            &-item {
+                padding: 8px;
+                margin: 0;
+            }
+        }
+
+        &-title {
+            position: absolute;
+            bottom: 128px;
+            left: 108px;
+            width: 32.333%;
+            height: auto;
+        }
+
+        &__actions {
+            position: absolute;
+            bottom: 80px;
+            left: 108px;
+            padding: 0;
+            height: auto;
+        }
+
+        &-map {
+            padding: 0;
+        }
+    }
+}

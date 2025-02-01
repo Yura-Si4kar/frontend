@@ -1,0 +1,284 @@
+.header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 16px;
+    padding-bottom: 16px;
+
+    &__wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: -100%;
+        height: -100%;
+        background-color: rgba(0,0,0,0.6);
+        z-index: 29;
+
+        &.open {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__menu {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 60%;
+        height: 100%;
+        background-color: #fff;
+        padding: 68px 24px 0;
+        overflow: auto;
+
+        &-list {
+            border-bottom: 1px solid #D9D9D9;
+            margin-bottom: 24px;
+        }
+        
+        &-item {
+            margin-bottom: 24px;
+        }
+        
+        &-link {
+            font-size: 14px;
+            line-height: 20px;
+            color: #6F767E;
+        }
+    }
+
+    &__language-item {
+        margin-bottom: 24px;
+    }
+        
+    &__language-title {
+        font-size: 12px;
+        line-height: 16px;
+        color: #6F767E;
+    }
+    
+    &__language-link {
+        font-size: 14px;
+        line-height: 20px;
+        color: #6F767E;
+        height: 18px;
+        width: 18px;
+        background-repeat: no-repeat;
+        background-position: left;
+        padding-left: 28px;
+
+        &_ru {
+            background-image: url(../img/russia-icon.svg);
+        }
+        
+        &_ua {
+            background-image: url(../img/ukraine-icon.svg);
+        }
+    }
+
+    &__actions {
+        display: flex;
+        align-items: center;
+
+        &-language {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+            color: #333;
+            cursor: pointer;
+            display: none;
+
+            &:hover {
+                border-color: #666; 
+            }
+
+            &:focus {
+                outline: none;
+                border-color: #007bff;
+                box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+            }
+
+            & option {
+                background-color: #fff;
+                color: #333;
+            }
+
+            & option:checked {
+                background-color: #007bff;
+                color: #fff;
+            }
+
+            & option:hover {
+                background-color: #f0f0f0;
+                color: #333;
+            }
+        }
+     
+        &-button {
+            background: #3E8BF3;
+            border-radius: 8px;
+            padding: 8px 12px;
+            font-size: 14px;
+            line-height: 20px;
+            color: #FFFFFF;
+        }
+
+        &-burger {
+            display: block;
+            position: relative;
+            width: 24px;
+            height: 24px;
+            position: relative;
+            z-index: 30;
+            margin-left: 16px;
+
+            & span {
+                position: absolute;
+                background-color: #000;
+                position: absolute;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                top: 10px;
+                transition: all 0.3s ease 0s;
+            }
+
+            &::before,
+            &::after {
+                content: '';
+                background-color: #000;
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                left: 0;
+                transition: all 0.3s ease 0s;
+            }
+
+            &::before {
+                top: 2px;
+            }
+
+            &::after {
+                bottom: 3px;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .header {
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        &__actions-language {
+            display: block;
+        }
+
+        &__actions-button {
+            font-size: 16px;
+            line-height: 24px;
+            padding: 12px 16px;
+            margin-left: 24px;
+        }
+
+        &__actions-burger {
+            width: 32px;
+            height: 32px;
+            margin-left: 24px;
+
+            & span {
+                top: 14px;
+                height: 3px;
+            }
+
+            &::before {
+                top: 5px;
+            }
+
+            &::after {
+                bottom: 6px;
+            }
+        }
+
+        &__menu {
+            width: 30%;
+            padding: 84px 32px 24px;
+
+                       
+            &-link {
+                font-size: 16px;
+                line-height: 24px;
+            }
+        }
+
+        &__language-item {
+            margin-bottom: 20px;
+        }        
+
+        &__language-title {
+            padding-bottom: 4px;
+        }
+        
+        &__language-link {
+            font-size: 16px;
+            line-height: 24px;
+            height: 20px;
+            width: 20px;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .header {
+
+        &__logo {
+            margin-right: 24px;
+        }
+
+        &__main {
+            display: flex;
+            align-items: center;
+        }
+
+        &__wrapper {
+            position: inherit;
+            background-color: transparent;
+        }
+
+        &__menu {
+            position: inherit;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+
+            &-list {
+                display: flex;
+                margin: 0;
+                border-bottom: 0;
+                padding-left: 24px;
+                border-left: 1px solid #D9D9D9;
+            }
+
+            &-item {
+                margin-bottom: 0;
+                padding-right: 20px;
+            }
+        }
+        
+        &__language-list {
+            display: none;
+        }
+        
+        &__actions-burger {
+            display: none;
+        }
+    }
+}
+
+@media (min-width: 1201px) {
+    .header__menu-item {
+        padding-right: 40px;
+    }
+}

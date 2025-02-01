@@ -1,0 +1,70 @@
+::-webkit-scrollbar{ width: 5px; height: 5px;/* 1 - вертикальний скроллбар */}
+::-webkit-scrollbar-button {background: transparent; /* 2 - кнопка */}
+::-webkit-scrollbar-track {background: transparent;/* 3 - трек */}
+::-webkit-scrollbar-track-piece { background: transparent; /* 4 – видима частина трека */ }
+::-webkit-scrollbar-thumb {background: rgba(0,0,0,0.3); border-radius: 10px; -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); /* 5 - повзунок */}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+} 
+
+.body {
+  font-family: 'TTFirsNeue', 'Arial', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  min-width: 320px;
+}
+
+.second_font {
+  font-family: 'Inter', 'Arial', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.lock {
+  overflow: hidden;
+}
+
+.image-responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  bottom: 0;
+  padding: 0;
+  clip: rect(0 0 0 0 );
+  overflow: hidden;
+}
+
+.second_container,
+.container {
+  max-width: 1256px;
+  min-width: 288px;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .second_container,
+  .container {
+    max-width: 1440px;
+    padding: 0 24px;
+  }
+}
+
+@media (min-width: 992px) {
+  .second_container {
+    padding: 0 108px;
+  }
+}
