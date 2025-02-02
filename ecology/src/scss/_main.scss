@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.body {
+  font-family: 'Montserrat', 'Arial', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  min-width: 375px;
+
+  &.lock {
+    overflow: hidden;
+  }
+}
+
+.image-response {
+  max-width: 100%;
+  height: auto;
+}
+
+.secont_fonts {
+  font-family: 'Poppins', 'Arial', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.container {
+  max-width: 1220px;
+  min-width: 355px;
+  padding: 0 10px;
+  margin: 0 auto;
+
+  @media (min-width: 576px) {
+    max-width: 1230px;
+    min-width: 345px;
+    padding: 0 15px;
+  }
+
+  @media (min-width: 768px) {
+    max-width: 1240px;
+    min-width: 335px;
+    padding: 0 20px;
+  }
+
+  @media (min-width: 992px) {
+    max-width: 1244px;
+    min-width: 331px;
+    padding: 0 22px;
+  }
+  
+  @media (min-width: 1200px) {
+    max-width: 1260px;
+    min-width: 315px;
+    padding: 0 30px;
+  }
+}
