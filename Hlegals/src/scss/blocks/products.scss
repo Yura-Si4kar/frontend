@@ -1,0 +1,100 @@
+.products {
+    background: linear-gradient(217deg, #323264 11.93%, #323264 81.4%, #643E72 87.46%);
+    border-radius: 0px 0px 12px 12px;
+    margin-bottom: 20px;
+
+    &__block {
+        border-top: 4px solid rgba(255, 255, 255, 0.5);
+        display: flex;
+        flex-wrap: wrap;
+
+        &-title {
+            font-size: 18px;
+            line-height: 21px;
+            color: $white;
+            margin-bottom: 10px;
+            padding-top: 20px;
+            width: 100%;
+        }
+    }
+
+    &__box {
+        margin-bottom: 10px;
+        display: flex;
+        flex-wrap: wrap;
+
+        &-list {
+            padding-left: 31px;
+        }
+
+        &-items {
+            color: $red;
+            padding-bottom: 25px;
+        }
+
+        &-text {
+            font-size: 16px;
+            line-height: 25px;
+            color: $white;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .products__box {
+        width: 50%;
+    }
+}
+
+@media (min-width: 992px) {
+    .products {
+        padding-bottom: 46px;
+        position: relative;
+        margin-bottom: 55px;
+
+        &::after {
+            content: "";
+            height: 10px;
+            width: calc(100% - 40px);
+            position: absolute;
+            left: 20px;
+            bottom: -10px;
+            border-radius: 0px 0px 12px 12px;
+            background-color: $line_01;
+        }
+
+        &::before {
+            content: "";
+            height: 10px;
+            width: calc(100% - 80px);
+            position: absolute;
+            left: 40px;
+            bottom: -20px;
+            border-radius: 0px 0px 12px 12px;
+            background-color: $line_02;
+        }
+
+        &__box {
+            width: calc(50% - 119px);
+            margin: 0 auto;
+
+            &-title {
+                font-size: 21px;
+                padding-top: 19px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    .products__box:nth-last-child(-n+1) {
+        padding-left: 16px;
+    }
+
+    .products__box-list {
+        padding-left: 26px;
+    }
+
+    .products__box-items {
+        padding-bottom: 11px;
+    }
+}

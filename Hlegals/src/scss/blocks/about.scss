@@ -1,0 +1,117 @@
+.about {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 0 24px;
+
+    &_border {
+        border-top: 4px solid $border;
+        padding-top: 15px;
+    }
+
+    &__blocks {
+        width: 100%;
+        margin-bottom: 20px;
+
+        &-title {
+            font-size: 32px;
+            line-height: 38px;
+            color: $red;
+            margin-bottom: 20px;
+        }
+
+        &-text {
+            font-size: 18px;
+            line-height: 26px;
+            color: $ultimate;
+        }
+
+        &-list {
+            padding: 0;
+            list-style: none;
+        }
+
+        &-item {
+            margin-bottom: 40px;
+            font-size: 18px;
+            line-height: 21px;
+            color: $gray-blue;
+
+            &-01 {
+                width: 97px;
+                height: 42px;
+                background: url(../img/10+.svg) no-repeat center center;
+            }
+
+            &-02 {
+                width: 107px;
+                height: 42px;
+                background: url(../img/30+.svg) no-repeat center center;
+            }
+
+            &-03 {
+                width: 132px;
+                height: 42px;
+                background: url(../img/500+.svg) no-repeat center center;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .about {
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 20px;
+
+        &_border {
+            border-top: none;
+            border-left: 4px solid #E6E6F0;
+        }
+
+        &__blocks {
+            width: 50%;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .about {
+        padding: 65px 102px 51px;
+
+        &__blocks-title {
+            font-size: 38px;
+            line-height: 44px;
+            margin-bottom: 18px;
+        }
+
+        &__blocks-text {
+            font-size: 19px;
+            line-height: 27px;
+            padding-bottom: 20px;
+        }
+
+        &__blocks-list {
+            margin-bottom: 30px;
+        }
+
+        &about__blocks-item-01,
+        &about__blocks-item-03 {
+            margin-bottom: 10px;
+        }
+
+        &about__blocks-item-02 {
+            margin-bottom: 6px;
+        }
+
+        .box_right {
+            padding-right: 27px;
+            width: 62%;
+        }
+
+        .box_left {
+            padding-left: 15px;
+            padding-top: 0px;
+            width: 38%;
+        }
+    }
+}

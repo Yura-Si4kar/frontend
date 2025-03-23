@@ -1,0 +1,32 @@
+@import '../../node_modules/swiper/swiper-bundle.min';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.body {
+    font-family: 'TTNorms', 'Arial', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    min-width: 320px;
+}
+
+.container {
+    max-width: 1360px;
+    min-width: 280px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 1320px;
+        min-width: 255px;
+        padding: 0 60px;
+    }
+}

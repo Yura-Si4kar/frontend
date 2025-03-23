@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="uk">
+@@include('./html/head.html', {
+    title: 'контакти'
+})
+<body>
+    @@include('./html/header_light.html', {
+        about: 'контакти'
+    })
+    <main class="main">
+        <section class="contacts">
+            <div class="contacts-container">
+                <div class="contacts__block">
+                    @@include('./html/contact_page/contact__block.html', {})
+                    <div class="contacts__block-form">
+                        @@include('./html/service_page/popup_form.html', {})
+                    </div>
+                </div>
+            </div>
+        </section>
+        @@include('./html/contact_page/contact__map.html', {})
+    </main>
+    @@include('./html/footer.html', {})
+</body>
+</html>

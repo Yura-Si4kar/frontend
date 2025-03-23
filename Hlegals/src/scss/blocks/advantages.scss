@@ -1,0 +1,144 @@
+.advantages {
+    position: relative;
+    background: linear-gradient(216deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
+    border-radius: 0px 0px 12px 12px;
+    padding: 40px 0;
+    margin-bottom: 40px;
+
+    &::after {
+        content: "";
+        height: 10px;
+        width: calc(100% - 40px);
+        position: absolute;
+        left: 20px;
+        bottom: -10px;
+        border-radius: 0px 0px 12px 12px;
+        background-color: $line_01;
+    }
+
+    &::before {
+        content: "";
+        height: 10px;
+        width: calc(100% - 80px);
+        position: absolute;
+        left: 40px;
+        bottom: -20px;
+        border-radius: 0px 0px 12px 12px;
+        background-color: $line_02;
+    }
+
+    &__about {
+
+        &-link {
+            text-decoration: none;
+            font-size: 13px;
+            line-height: 17px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: $white;
+            opacity: 0.5;
+            background-image: url(../img/arrow_right.svg);
+            background-position: right;
+            background-repeat: no-repeat;
+            padding-right: 14px;
+        }
+
+        &-text {
+            font-size: 32px;
+            line-height: 38px;
+            color: $red;
+        }
+
+        &-block {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -20px;
+        }
+
+        &-card {
+            width: 100%;
+            padding: 20px;
+        }
+
+        &-main {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        &-title a {
+            font-size: 18px;
+            line-height: 21px;
+            display: flex;
+            align-items: center;
+            color: $blue;
+            margin-left: 10px;
+            text-decoration: none;
+
+            &:hover {
+                color: $red;
+            }
+        }
+
+        &-info {
+            font-size: 16px;
+            line-height: 22px;
+            color: $white;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .advantages__about-card {
+        width: 50%;
+    }
+}
+
+@media (min-width: 992px) {
+    .advantages {
+        padding: 8px 0 0;
+        margin-bottom: 45px;
+
+        &__about {
+            margin-bottom: 45px;
+
+            &-text {
+                font-size: 38px;
+                font-weight: bold;
+                margin-top: 4px;
+            }
+            
+            &-card {
+                width: 33.333%;
+                margin-bottom: 3px;
+    
+                &:nth-last-child(-n+3) {
+                    margin-bottom: 0;
+                    padding-bottom: 4px;
+                }
+            }
+
+            &-main {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            &-title a {
+                font-weight: 500;
+                line-height: 28px;
+                margin-left: 0;
+                margin-top: 16px;
+                font-size: 22px;
+            }
+
+            &-info {
+                font-size: 16px;
+                line-height: 24px;
+                color: $white;
+                margin-top: 12px;
+            }
+        }
+
+    }
+}

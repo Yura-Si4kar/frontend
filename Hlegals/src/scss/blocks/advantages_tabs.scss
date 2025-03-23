@@ -1,0 +1,150 @@
+.advantages__tabs {
+    margin-bottom: 45px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+
+    &-menu {
+        padding: 0;
+    }
+
+    &-list {
+        background-color: $blue;
+        opacity: 0.2;
+        padding: 8px;
+        margin-left: 14px;
+        font-weight: bold;
+        font-size: 0px;
+        line-height: 0px;
+        letter-spacing: 0px;
+        text-decoration: none;
+        margin-bottom: 10px;
+        border-radius: 50%;
+        cursor: pointer;
+
+        &:hover {
+            color: $btn-hover;
+        }
+
+        &:active {
+            color: $blue;
+        }
+    }
+
+    &-content {
+        display: none;
+    }
+
+    &-title {
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 1px;
+        color: red;
+        text-decoration: none;
+        margin-bottom: 10px;
+    }
+
+    &-sub-title {
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 26px;
+        color: $white;
+        margin-bottom: 15px;
+    }
+
+    &-text {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 26px;
+        color: $white;
+    }
+}
+
+.active_tab {
+    opacity: 1;
+}
+
+.active_content {
+    display: block;
+}
+
+@media (min-width:992px) {
+    .advantages__tabs {
+        display: flex;
+        padding-top: 65px;
+        margin-bottom: 50px;
+        flex-direction: row;
+
+        &-menu {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            width: 43%;
+        }
+
+        &-list {
+            background-color: transparent;
+            opacity: 1;
+            border-radius: 0;
+            font-size: 35px;
+            line-height: 47px;
+            text-align: right;
+            color: $grey;
+            border-right: 4px solid #E6E6F0;
+            padding: 0px 37px 18px 0;
+            text-transform: capitalize;
+            margin-bottom: 0;
+
+            &:nth-last-child(-n+3) {
+                display: block;
+            }
+
+            &:hover {
+                color: $red;
+            }
+
+            &:active {
+                border-right: 4px solid $red;
+            }
+        }    
+
+        &-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 35px;
+            padding-bottom: 18px;
+            width: 57%;
+            display: none;
+        }
+
+        &-title {
+            display: none;
+        }
+
+        &-sub-title {
+            font-size: 29px;
+            line-height: 35px;
+            color: $white;
+            margin-bottom: 17px;
+            width: 82%;
+        }
+
+        &-text {
+            font-size: 19px;
+            line-height: 27px;
+            color: $white;
+            width: 83%;
+        }
+    }
+
+    .active_tab {
+        color: $red;
+        border-right: 4px solid $red;
+    }
+
+    .active_content {
+        display: block;
+    }
+}

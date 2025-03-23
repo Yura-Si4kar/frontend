@@ -1,0 +1,129 @@
+.team {
+    margin-bottom: 30px;
+
+    &__card {
+        display: grid;
+        grid-template-rows: auto auto auto;
+        grid-template-columns: auto 1fr;
+        grid-template-areas:
+            "link link"
+            "text text"
+            "img name";
+        background: $ft-bg;
+        border-radius: 12px;
+        padding: 20px 0 27px 21px;
+        margin-bottom: 15px;
+
+        &-link {
+            grid-area: link;
+            justify-self: flex-start;
+            align-self: baseline;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 17px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: $blue;
+            text-decoration: none;
+            margin-bottom: 3px;
+
+            &:hover {
+                color: $red;
+
+                & path {
+                    stroke: $red;
+                }
+            }
+        }
+
+        &-text {
+            grid-area: text;
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 38px;
+            color: $red;
+            margin-bottom: 10px;
+        }
+
+        &-img {
+            grid-area: img;
+            
+            img {
+                height: 100%;
+                border-radius: 120px;
+            }
+        }
+
+        &-name {
+            grid-area: name;
+            padding: 5px 10px 27px;
+        }
+
+        &-title {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 21px;
+            color: $grey;
+            margin-bottom: 5px;
+            text-decoration: none;
+            cursor: pointer;
+
+            &:hover {
+                color: $red;
+            }
+        }
+
+        &-subtitle {
+            font-size: 16px;
+            line-height: 22px;
+            color: $grey;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .team {
+        margin: 20px 0 82px;
+
+        &__card {
+            display: grid;
+            grid-template-rows: 56px auto auto;
+            grid-template-columns: min-content auto;
+            grid-template-areas:
+                "img link"
+                "img text"
+                "img name";
+            padding: 0;
+            border-radius: 0 12px 12px 0;
+
+            &-link {
+                padding-left: 36px;
+                align-self: flex-end;
+                font-size: 13px;
+            }
+
+            &-text {
+                padding: 0px 78px 0 36px;
+                font-size: 38px;
+                line-height: 45px;
+                margin: 0;
+            }
+
+            &-img {
+                & img {
+                    height: 100%;
+                    border-radius: 0;
+                }
+            }
+
+            &-name {
+                padding-top: 0px;
+                padding-left: 36px;
+            }
+
+            &-title {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="uk">
+    @@include('./html/head.html', {
+        title: "Послуги"
+    })
+<body class="body">
+    <header class="header_service">
+        <div class="container">
+            @@include('./html/header_dark.html', {
+                about: "послуги"
+            })
+        </div>
+    </header>
+    <main>
+        <section class="advantages">
+            <div class="container">
+                @@include('./html/main_page/advantages.html', {})
+            </div>
+        </section>
+        @@include('./html/main_page/services_block.html', {})
+        @@include('./html/main_page/trust_block.html', {})
+    </main>
+    @@include('./html/footer.html', {})
+</body>
+</html>

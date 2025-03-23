@@ -1,0 +1,189 @@
+.footer {
+    background: $ft-bg;
+    padding-bottom: 118px;
+
+    &__block {
+        &-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        &-address {
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 19px;
+            text-align: center;
+            color: $gray-blue;
+            margin-bottom: 10px;
+        }
+
+        &-map {
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 14px;
+            text-align: center;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: $blue;
+            text-decoration: none;
+            margin-bottom: 20px;
+
+            &:hover {
+                color: $red;
+            }
+        }
+
+        &-link {
+            margin-bottom: 20px;
+            text-decoration: none;
+            padding-left: 10px;
+
+            &:hover path {
+                fill: $red;
+            }
+        }
+
+        &-tell {
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 19px;
+            text-align: center;
+            color: $gray-blue_02;
+            margin-bottom: 20px;
+            text-decoration: none;
+
+            &:hover {
+                color: $red;
+            }
+        }
+
+        &-mail {
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 19px;
+            color: $blue;
+            text-decoration: none;
+
+            &:hover {
+                color: $red;
+            }
+        }
+
+        &-text {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 19px;
+            text-align: center;
+            color: $grey;
+        }
+    }
+
+}
+
+@media (min-width: 768px) {
+    .footer__block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-top: 4px solid $border;
+
+        &-info {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 400px;
+            align-items: flex-start;
+            margin: 4px auto 0;
+            padding: 20px 0 0;
+        }
+
+        &-title {
+            font-size: 14px;
+            margin-bottom: 22px;
+            margin-right: 31px;
+        }
+
+        &-fb {
+            margin-bottom: 22px;
+            margin-right: 4px;
+        }
+
+        &-map {
+            display: inline-flex;
+            padding-left: 16px;
+            font-size: 12px;
+            padding-top: 3px;
+
+            &::before {
+                content: "";
+                display: list-item;
+                list-style: disc;
+                color: $grey;
+            }
+        }
+
+        &-tell {
+            display: inline-flex;
+            margin-bottom: 0;
+            margin-right: 6px;
+            padding-left: 19px;
+            font-size: 15px;
+            padding-top: 5px;
+
+            &::before {
+                content: "";
+                display: list-item;
+                list-style: disc;
+                color: $grey;
+            }
+        }
+
+        &-mail {
+            margin-bottom: 0;
+            display: inline-flex;
+            padding-left: 18px;
+            font-size: 16px;
+            padding-top: 4px;
+
+            &::before {
+                content: "";
+                display: list-item;
+                list-style: disc;
+                color: $grey;
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .footer {
+        padding: 0 38px 40px;
+
+        &__block {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: baseline;
+
+            &-info {
+                margin: 4px 0 0;
+            }
+
+            &-link {
+                padding-left: 0;
+            }
+
+            &-root {
+                display: flex;
+                align-items: flex-start;
+            }
+            
+            &-text {
+                font-size: 15px;
+            }
+
+        }
+    }
+}

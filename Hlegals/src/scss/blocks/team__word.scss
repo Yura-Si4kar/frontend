@@ -1,0 +1,111 @@
+.team-word__box {
+    background-image: url(../img/team.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 290px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+
+    &-title {
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 42px;
+        text-align: center;
+        letter-spacing: 20px;
+        text-transform: uppercase;
+        color: $white;
+    }
+}
+
+@media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .team-word__box {
+        background-image: url(../img/team@2x.png);
+    }
+}
+
+.team-word__mix {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+
+    &-box {
+        width: 100%;
+    }
+
+    &-text {
+        font-size: 18px;
+        line-height: 26px;
+        color: $ultimate;
+        margin-bottom: 20px;
+    }
+
+    &-title {
+        font-size: 32px;
+        line-height: 38px;
+        color: $red;
+    }
+}
+
+@media (min-width: 768px) {
+    .team-word__box {
+        margin: auto;
+        width: 100%;
+    }
+
+    .team-word__mix-box {
+        width: 50%;
+    }
+
+    .box_right {
+        padding-right: 27px;
+    }
+
+    .box_left {
+        padding-left: 42px;
+    }
+}
+
+@media (min-width: 992px) {
+    .team-word__box {
+        height: 398px;
+        width: 100%;
+        background-size: cover;
+        margin-bottom: 72px;
+
+        &-title {
+            font-size: 86px;
+            line-height: 113px;
+            letter-spacing: 63px;
+        }
+    }
+
+    .team-word__mix {
+        padding: 0 101px;
+        margin-bottom: 61px;
+
+        .box_right {
+            padding-right: 27px;
+            width: 62%;
+        }
+
+        .box_left {
+            padding-left: 2px;
+            padding-top: 0px;
+            width: 38%;
+        }
+
+        &-text {
+            font-size: 19px;
+            line-height: 27px;
+        }
+
+        &-title {
+            font-size: 38px;
+            line-height: 46px;
+        }
+    }
+}

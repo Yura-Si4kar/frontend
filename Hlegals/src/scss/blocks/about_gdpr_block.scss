@@ -1,0 +1,123 @@
+.gdpr__about {
+    padding: 20px 0;
+
+    &-box {
+        margin-bottom: 20px;
+        
+        :last-child {
+            padding: 0;
+        }
+    }
+
+    &-text {
+        font-size: 18px;
+        line-height: 26px;
+        color: #000000;
+        padding-bottom: 33px;
+
+        &_p0 {
+            padding: 0;
+        }
+    }
+
+    &-title {
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 38px;
+        color: #F0145A;
+        margin-bottom: 40px;
+    }
+
+    &-subtitle {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+        color: #46466E;
+        margin:40px 0 20px;
+    }
+    
+    &-list {
+        margin-bottom: 20px;
+
+        :last-child {
+            margin-bottom: 0;
+        }
+    } 
+
+    &-item {
+        font-size: 18px;
+        line-height: 26px;
+        color: #000000;
+        margin-bottom: 28px;
+    }
+
+    &-img {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    &-example {
+        font-size: 16px;
+        line-height: 22px;
+        text-align: center;
+        color: #B3B3BA;
+        margin-bottom: 20px;
+    }
+
+    &-social {
+        padding: 20px 0;
+        border-top: 4px solid #E6E6F0;
+        margin-top: 40px;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+    }
+
+    &-links {
+        padding: 9px;
+        background: #F5F5FA;
+        border-radius: 12px;
+        margin: 0 10px;
+    }
+}
+
+@media (min-width:992px) {
+    .gdpr__about {
+        padding: 40px 20px;
+
+        &-box {
+            margin-bottom: 40px;
+        }
+
+        &-title {
+            margin: 0 -20px;
+            font-size: 42px;
+            line-height: 50px;
+        }
+
+        &-subtitle {
+            font-size: 24px;
+            line-height: 28px;
+        }
+        
+        &-list {
+            margin-bottom: 25px;
+        }
+        
+        &-img_container {
+            text-align: center;
+        }
+
+        &-img {
+            width: calc(100% - 133px);
+        }
+
+        &-example {
+            margin-bottom: 40px;
+        }
+
+        &-social {
+            justify-content: start;
+        }
+    }
+}

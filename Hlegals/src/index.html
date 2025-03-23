@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="uk">
+@@include('./html/head.html', {
+    title: "Головна"
+})
+<body class="body">
+    <header class="header">
+        <div class="container">
+            @@include('./html/header_main.html', {
+                about: ''
+            })
+            @@include('./html/main_page/header_title.html', {})
+        </div>
+    </header>
+    <main>
+        <section class="advantages">
+            <div class="container">
+                @@include('./html/main_page/advantages_tabs.html', {})
+                @@include('./html/main_page/advantages.html', {})
+            </div>
+        </section>
+        @@include('./html/main_page/team_card.html', {})
+        @@include('./html/main_page/services_block.html', {})
+        @@include('./html/main_page/trust_block.html', {})
+        @@include('./html/main_page/publication_block.html', {
+            title: 'Нам є що розказати'
+        })
+    </main>
+    @@include('./html/footer.html', {})
+</body>
+</html>

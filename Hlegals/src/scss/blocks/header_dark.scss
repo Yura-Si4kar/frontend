@@ -1,0 +1,292 @@
+.header {
+    background: url(../img/symbol_p.svg) no-repeat bottom center, linear-gradient(42.01deg, #323264 14.33%, #323264 51.39%, #7A425E 87.53%);
+
+    &_service {
+        background: linear-gradient(2deg, #323264 14.33%, #323264 51.39%, #7A425E 87.53%);
+    }
+
+    &_comersion {
+        background: linear-gradient(180deg, rgba(50, 50, 100, 0.1) 0%, #323264 100%), center / cover no-repeat url(../img/keybord.png);
+        height: auto;
+        padding-bottom: 40px;
+    }
+
+    &-main {
+        display: grid;
+        grid-template-rows: auto auto;
+        grid-template-columns: 1fr min-content;
+        grid-template-areas:
+            "info info"
+            "logo menu";
+
+        &__info {
+            grid-area: info;
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 0 10px;
+            align-items: center;
+
+            &-leng {
+                display: flex;
+                list-style: none;
+                padding: 0;
+            }
+            
+            &-list {
+                padding-right: 5px;
+            }
+            
+            &-items {
+                text-decoration: none;
+                font-size: 12px;
+                line-height: 14px;
+                text-align: center;
+                letter-spacing: 1px;
+                color: $grey;
+                text-transform: uppercase;
+                padding: 3.666px;
+                border-radius: 8px;
+                background-color: Transparent;
+                background-repeat: no-repeat;
+                border: none;
+                cursor: pointer;
+                overflow: hidden;
+    
+                &:hover {
+                    background: $red;
+                }
+            }
+            
+            &-block {
+                display: flex;
+                justify-content: flex-end;
+                align-items: baseline;
+            }
+
+            &-adress {
+                font-size: 16px;
+                line-height: 19px;
+                text-align: right;
+                color: $white;
+                display: none;
+            }
+            
+            &-tell {
+                padding: 2px 0 3px;
+                text-decoration: none;
+                font-weight: bold;
+                font-size: 14px;
+                line-height: 19px;
+                text-align: right;
+                color: $grey;
+
+                &:hover {
+                    color: $red;
+                }
+            }
+
+
+            &-link {
+                display: none;
+
+                &:hover path {
+                    fill: $blue;
+                }
+            }
+        }
+
+        &__logo {
+            display: flex;
+            align-items: center;
+            grid-area: logo;
+            padding: 10px 0 9px;
+
+            &-size {
+                height: 31px;
+                width: 77px;
+            }
+
+            &-link {
+                display: inline-flex;
+                font-weight: normal;
+                font-size: 19px;
+                line-height: 22px;
+                color: $white;
+                text-decoration: none;
+
+                &::before {
+                    content: url("../img/slash-mob.png");
+                }
+
+                &::after {
+                    content: url("../img/mob_symbol.png");
+                }
+            }
+        }
+
+        &__menu {
+            grid-area: menu;
+            padding: 9px 0;
+            display: flex;
+            justify-content: flex-end;
+
+            &-list {
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 21px;
+                text-align: right;
+                color: $white;
+                text-decoration: none;
+                padding-left: 15px;
+                display: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            &-icon {
+                text-decoration: none;
+                font-size: 22px;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .header {
+        height: 695px;
+        background: url(../img/bg-main-p.svg) calc(50% - 70px) bottom no-repeat, url(../img/bg-something.svg) no-repeat bottom center, linear-gradient(42.01deg, #323264 14.33%, #323264 51.39%, #7A425E 87.53%);
+
+        &-main {
+            display: grid;
+            grid-template-rows: auto auto auto;
+            grid-template-columns: min-content auto;
+            grid-template-areas:
+                "info info"
+                "logo logo"
+                "menu menu";
+            align-items: center;
+            
+            &__info {
+                display: inline-flex;
+                justify-content: flex-start;
+                padding: 0;
+                align-items: baseline;
+                
+                &-leng {
+                    margin-right: 21px;
+                }
+                
+                &-list {
+                    padding-right: 0px;
+                }
+                
+                &-adress {
+                    display: inline-flex;
+                    font-size: 14px;
+    
+                    &::before {
+                        content: "";
+                        display: list-item;
+                        list-style: disc;
+                        color: $grey;
+                    }
+                }
+
+                &-tell {
+                    display: inline-flex;
+                    padding-left: 24px;
+                    color: $white;
+                    padding-right: 23px;
+                    padding-top: 11px;
+    
+                    &::before {
+                        content: "";
+                        display: list-item;
+                        list-style: disc;
+                        color: $grey;
+                        margin-right: 9px;
+                    }
+                }
+                
+                &-link {
+                    display: inline-flex;
+    
+                    &::before {
+                        content: "";
+                        display: list-item;
+                        list-style: disc;
+                        color: $grey;
+                    }
+                }
+            }
+
+            &__logo-size {
+                height: 61px;
+                width: 142px;
+            }
+
+            &__logo-link {
+                display: inline-flex;
+                font-size: 34px;
+                line-height: 45px;
+    
+                &::before {
+                    content: url("../img/slash.svg");
+                }
+    
+                &::after {
+                    content: url("../img/p-after.png");
+                }
+            }
+
+            &__menu {
+                padding: 3px 0;
+                display: flex;
+                justify-content: flex-start;
+    
+                &-list {
+                    display: block;
+                    padding-left: 16px;
+                    font-size: 16px;
+    
+                    &:hover {
+                        text-decoration: underline;
+                    }
+    
+                    &:first-child {
+                        padding-left: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .header_comersion {
+        background: linear-gradient(180deg, rgba(50, 50, 100, 0.1) 0%, #323264 100%), center / cover no-repeat url(../img/keybord@2x.png);
+    }
+}
+
+@media (min-width: 992px) {
+    .header-main {
+        display: grid;
+        grid-template-rows: auto auto;
+        grid-template-columns: min-content auto;
+        grid-template-areas:
+            "logo info"
+            "logo menu";
+
+        &__info {
+            display: inline-flex;
+            justify-content: flex-end;
+        }
+
+        &__menu {
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+}

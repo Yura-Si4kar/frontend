@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="uk">
+    @@include('./html/head.html', {
+        title: "Публікації"
+    })
+<body>
+    @@include('./html/header_light.html', {
+        about: "публікації"
+    })
+    <main>
+        @@include('./html/publication_page/gdpr_block.html', {})
+        @@include('./html/publication_page/about_gdpr_block.html', {})
+        @@include('./html/main_page/publication_block.html', {
+            title: 'Рекомендуємо'
+        })
+    </main>
+    @@include('./html/footer.html', {})
+</body>
+</html>

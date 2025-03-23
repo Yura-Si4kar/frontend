@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="uk">
+    @@include('./html/head.html', {
+        title: "О нас"
+    })
+<body class="body">
+    @@include('./html/header_light.html', {
+        about: "o нас"
+    })
+    <main>
+        @@include('./html/about_page/about_block.html', {})
+        @@include('./html/about_page/team_word_block.html', {})
+        @@include('./html/about_page/progress_block.html', {})
+    </main>
+    @@include('./html/footer.html', {})
+</body>
+</html>
